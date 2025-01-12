@@ -5,7 +5,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Navbar from 'react-bootstrap/Navbar';
 import { useState } from 'react';
-import Loginmodal from './modal';
+import Loginmodal from './loginmodal';
 function offcanvasNavbar(expand) {
     const [showLogin, setShowLogin] = useState(false);
     const [expanded, setExpanded] = useState(false);

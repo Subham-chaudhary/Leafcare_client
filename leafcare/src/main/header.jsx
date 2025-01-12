@@ -13,9 +13,9 @@ function header() {
     const [screenHeight, setScreenHeight] = useState(window.innerHeight);
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY >= screenHeight / 10) {
+            if (window.scrollY >= screenHeight / 25) {
                 setTriggerAnimation(true);
-            } else if (window.scrollY < screenHeight / 25) {
+            } else if (window.scrollY < screenHeight / 50) {
                 setTriggerAnimation(false);
             }
         };

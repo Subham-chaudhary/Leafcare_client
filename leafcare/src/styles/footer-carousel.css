@@ -1,0 +1,28 @@
+/* Continuous motion effect for Bootstrap carousel */
+.continuous-carousel .carousel-inner {
+    display: flex;
+    animation: scroll-left linear infinite;
+  }
+  
+  @keyframes scroll-left {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Image sizing */
+  .small-image {
+    width: 100px; /* Adjust size as needed */
+  }
+  
+  .medium-image {
+    width: 120px; /* Adjust size as needed */
+  }
+  
+  .large-image {
+    width: 150px; /* Adjust size as needed */
+  }
+
