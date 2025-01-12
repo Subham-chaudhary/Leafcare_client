@@ -5,7 +5,7 @@ import logo from '../assets/logo-leafcare-removebg.png'
 import { motion, useSpring, useScroll } from "motion/react"
 import React, { useEffect, useState } from 'react';
 import Row from 'react-bootstrap/Row';
-import './header.css';
+import '../styles/header.css';
 import Button from 'react-bootstrap/Button';
 import Float_header from './float-header';
 function header() {

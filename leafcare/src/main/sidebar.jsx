@@ -5,10 +5,12 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Navbar from 'react-bootstrap/Navbar';
 import { useState } from 'react';
+import Loginmodal from './modal';
 function offcanvasNavbar(expand) {
-   const [expanded, setExpanded] = useState(false);
+    const [showLogin, setShowLogin] = useState(false);
+    const [expanded, setExpanded] = useState(false);
     return (
-        <> <Navbar.Offcanvas onShow={() => setExpanded(true)} onHide={() => setExpanded(false)} 
+        <> <Navbar.Offcanvas onShow={() => setExpanded(true)} onHide={() => setExpanded(false)}
             id={`offcanvasNavbar-expand-${expand}`}
             aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
             placement="end">
@@ -19,11 +21,11 @@ function offcanvasNavbar(expand) {
             </Offcanvas.Header>
             <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                    <Nav.Link href="#action1">Join Now</Nav.Link>
+                    <Nav.Link href="#" onClick={() => setShowLogin(true)}>Join Now</Nav.Link>
                     <NavDropdown
                         title="Our Services"
                         id={`offcanvasNavbarDropdown-expand-${expand}`}
-                        
+
                     >
                         <NavDropdown.Item href="#action3">GeoSearch</NavDropdown.Item>
                         <NavDropdown.Item href="#action4">
@@ -45,7 +47,10 @@ function offcanvasNavbar(expand) {
                     <Button variant="outline-success">Search</Button>
                 </Form>
             </Offcanvas.Body>
-        </Navbar.Offcanvas></>
+        </Navbar.Offcanvas>
+        {showLogin && (
+        <Loginmodal show={showLogin} setShow={setShowLogin} />)}
+        </>
     )
 }
 export default offcanvasNavbar

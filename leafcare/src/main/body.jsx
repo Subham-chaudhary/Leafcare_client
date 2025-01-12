@@ -6,7 +6,8 @@ import Stack from 'react-bootstrap/Stack';
 import { useState } from 'react';
 
 import { motion, useSpring, useScroll } from "motion/react"
-
+import Hero from './hero';
+import Loginmodal from './modal';
 
 function body() {
   const { scrollYProgress } = useScroll();
@@ -15,26 +16,11 @@ function body() {
     damping: 30,
     restDelta: 0.001,
   })
-  
+
   return (
     <>
-      <motion.div
-
-        id="scroll-indicator"
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{
-          duration: 0.4,
-          scale: { type: "spring", visualDuration: 0.9, bounce: 0.6 },
-        }}
-        style={{ scaleX, background: "linear-gradient(to right, #2f9e44, #b2f2bb)", zIndex: 1000, position: "fixed", top: 500, left: 0, right: 50, height: 3 }}
-        >
-        <Container>
-          <h1>LeafCare</h1>
-        </Container>
-      </motion.div>
-      
-        
+      <h1>Body</h1>
+      <Hero/>
     </>
   );
 }

@@ -5,8 +5,8 @@ function float_header() {
     return (
         <>
         <h1>Add Anything here logo and carosel</h1>
-        <Container>
-            <Carousel interval={100}>
+        <Container style={{width: "50%"}}>
+            <Carousel interval={500}>
                 {["https://www.kindpng.com/picc/m/610-6105332_cheems-png-transparent-png.png",
                 "https://i.imgflip.com/3nzkub.png?a482184",
                  "https://pngimg.com/d/doge_meme_PNG1.png",
