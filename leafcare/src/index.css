@@ -52,12 +52,5 @@ button:focus-visible {
   }
 }
 
-.row{
-  background-color:red;
-  margin: 3px;
-}
-.col{
-  margin: 3px;
-  background-color: green;
-}
+
 
