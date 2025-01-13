@@ -55,7 +55,7 @@ function header() {
                             </Container>
                         </motion.div>
                     </Row>
-                    <Container fluid><Navbar.Brand href="#home">
+                    <Container fluid><Navbar.Brand href="/">
                         <img
                             alt=""
                             src={logo}
